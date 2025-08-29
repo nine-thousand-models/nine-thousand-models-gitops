@@ -1,0 +1,6 @@
+name: tire-predictor
+namespace: fika
+chart: model-deployment
+image:
+  repository: quay.io/ckavili/tire-predictor
+  tag: v1.0.0
