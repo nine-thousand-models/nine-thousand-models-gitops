@@ -1,0 +1,51 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: fika-test-project
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: fika-test-appset
+spec:
+  goTemplate: true
+  generators:
+  - git:
+      repoURL: "https://github.com/ckavili/nine-thousand-models-gitops.git"
+      revision: main
+      files:
+      - path: test/**/config.yaml
+  template:
+    metadata:
+      name: "{{ .path.basename }}-test"
+    spec:
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: fika-test
+      project: fika-test-project
+      sources:
+        - ref: app-values
+          repoURL: "https://github.com/ckavili/nine-thousand-models-gitops.git"
+          targetRevision: main
+        - helm:
+            valueFiles:
+              - $app-values/test/{{ .path.basename }}/config.yaml 
+          path: '{{ .chart_path }}'
+          repoURL: '{{ .repo_url | default "https://github.com/rhoai-mlops/mlops-helmcharts.git" }}'
+          targetRevision: '{{ .target_revision | default "main" }}'
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+        syncOptions:
+          - Validate=true
