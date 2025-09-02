@@ -3,4 +3,4 @@ chart_path: charts/model-deployment/simple
 name: tire-predictor
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-test
-version: 85c8dec02d
+version: 4e99953197
