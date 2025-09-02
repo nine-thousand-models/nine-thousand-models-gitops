@@ -21,7 +21,7 @@ spec:
   goTemplate: true
   generators:
   - git:
-      repoURL: "https://github.com/ckavili/nine-thousand-models-gitops.git"
+      repoURL: "https://github.com/nine-thousand-models/nine-thousand-models-gitops.git"
       revision: main
       files:
       - path: test/**/config.yaml
@@ -35,7 +35,7 @@ spec:
       project: fika-test-project
       sources:
         - ref: app-values
-          repoURL: "https://github.com/ckavili/nine-thousand-models-gitops.git"
+          repoURL: "https://github.com/nine-thousand-models/nine-thousand-models-gitops.git"
           targetRevision: main
         - helm:
             valueFiles:
