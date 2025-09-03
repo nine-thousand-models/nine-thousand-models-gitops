@@ -1,6 +1,6 @@
+---
+chart_path: charts/model-deployment/simple
 name: tire-predictor
-namespace: fika-prod
-chart: model-deployment
-image:
-  repository: quay.io/ckavili/tire-predictor
-  tag: v1.0.0
+image_repository: image-registry.openshift-image-registry.svc:5000
+image_namespace: fika-prod
+version: f6488cda29
