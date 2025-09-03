@@ -3,4 +3,4 @@ chart_path: charts/model-deployment/simple
 name: exhaust-predictor
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-prod
-version: 0e55c43fd5
+version: 47c45ebea6
