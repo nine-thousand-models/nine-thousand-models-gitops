@@ -1,0 +1,6 @@
+---
+chart_path: charts/model-deployment/simple
+name: breaks-predictor
+image_repository: image-registry.openshift-image-registry.svc:5000
+image_namespace: fika-prod
+version: c26c1d7a26
