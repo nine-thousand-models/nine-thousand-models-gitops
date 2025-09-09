@@ -1,6 +1,6 @@
 ---
 chart_path: charts/model-deployment/simple
-name: engine-predictor
+name: sales-forecast
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-test
-version: f7844fe3d7
+version: f6488cda29

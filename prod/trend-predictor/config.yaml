@@ -1,6 +1,6 @@
 ---
 chart_path: charts/model-deployment/simple
-name: tire-predictor
+name: trend-predictor
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-prod
 version: f6488cda29

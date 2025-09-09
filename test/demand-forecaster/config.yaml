@@ -1,6 +1,6 @@
 ---
 chart_path: charts/model-deployment/simple
-name: exhaust-predictor
+name: demand-forecaster
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-test
 version: f7844fe3d7
