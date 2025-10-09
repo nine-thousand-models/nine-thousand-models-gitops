@@ -3,4 +3,4 @@ chart_path: charts/model-deployment/simple
 name: demand-forecaster
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-prod
-version: bc35a451f8
+version: 457cea7b2a
