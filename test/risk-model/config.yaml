@@ -3,4 +3,4 @@ chart_path: charts/model-deployment/simple
 name: risk-model
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-test
-version: f6488cda29
+version: 31ea4e46cb
