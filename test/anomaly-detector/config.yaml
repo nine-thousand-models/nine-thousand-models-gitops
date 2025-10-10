@@ -3,4 +3,4 @@ chart_path: charts/model-deployment/simple
 name: anomaly-detector
 image_repository: image-registry.openshift-image-registry.svc:5000
 image_namespace: fika-test
-version: ba9d5ad36e
+version: 6b648886a6
