@@ -1,0 +1,6 @@
+---
+chart_path: charts/model-deployment/simple
+name: fraud-detector
+image_repository: image-registry.openshift-image-registry.svc:5000
+image_namespace: fika-prod
+version: 9e99cb9e19
