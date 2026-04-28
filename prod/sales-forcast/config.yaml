@@ -1,0 +1,6 @@
+---
+chart_path: charts/model-deployment/simple
+name: sales-forcast
+image_repository: image-registry.openshift-image-registry.svc:5000
+image_namespace: fika-prod
+version: bfb1dcf6c4
