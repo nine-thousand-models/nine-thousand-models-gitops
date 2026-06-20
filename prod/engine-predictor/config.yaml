@@ -1,0 +1,6 @@
+---
+chart_path: charts/model-deployment/simple
+name: engine-predictor
+image_repository: image-registry.openshift-image-registry.svc:5000
+image_namespace: fika-prod
+version: cf59a1cb8b
